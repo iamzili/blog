@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>{{ title }}</title>
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata:400" rel="stylesheet">
+  <style type="text/css">
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url(/fonts/BerkeleyMono-Regular.woff2);
+}
+
+@font-face {
+    font-family: "Haskoy-V";
+    src: url("/fonts/Haskoy[wght].woff2") format("woff2");
+}
+
+@font-face {
+    font-family: "Haskoy";
+    src: url("/fonts/Haskoy-Regular.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Haskoy";
+    src: url("/fonts/Haskoy-Light.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 300;
+}
+
+* {
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-renderoing: geometricPrecision;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+background: rgb(20, 24, 31);
+font-size: 16px;
+font-weight: 400;
+font-family: Haskoy, Inter, ui-sans-serif, system-ui, -apple-system, "system-ui", "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+line-height: 1.6;
+  color: rgba(203, 204, 204);
+}
+
+
+a {
+  color: rgba(255, 255, 255);;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+  transition: border-color 0.2s;
+}
+
+a:hover {
+  border-bottom: 1px solid #888;
+}
+
+em {
+  font-style: italic;
+}
+
+p {
+    line-height: 1.6;
+    margin: 30px 0;
+}
+
+pre {
+  font: 1.1rem Assistant,-apple-system,BlinkMacSystemFont,Arial,sans-serif;
+}
+
+code {
+  font-family: Assistant,-apple-system,BlinkMacSystemFont,Arial,sans-serif;
+  padding: 2px 2px;
+}
+
+iframe {
+  max-width: 100% !important;
+}
+
+strong, strong a {
+  font-weight: 600 !important;
+}
+
+
+::selection {
+  color: rgba(253, 73, 193, 0.8);
+  background: rgba(80, 60, 85, 0.3);
+}
+
+
+.page-date {
+  color: #999;
+  font-size: 14px;
+  margin: 0 0 25px 0;
+  font-family: 'Berkeley Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.page-title {
+  line-height: 56px;
+  font-size: 48px;
+  margin: 16px 0 25px 0;
+  letter-spacing: 0;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.page-image {
+  max-height: unset !important;
+  /*margin-bottom: 36px;*/
+  border-radius: 24px;
+  max-height: unset !important;
+}
+
+.column {
+
+  max-width: 640px;
+  padding: 0 6.4% 24px;
+  margin: 0 auto;
+}
+
+.blog {
+  margin: 0 auto;
+  margin-top: 20vh;
+padding: 0 6.4% 24px;
+font-size: 18px;
+}
+
+.blog .bio {
+  border-top: 1px solid #eee;
+  padding-top: 48px;
+  margin: 48px auto;
+  display: grid;
+  grid-template-columns: 100px auto;
+  gap: 20px;
+  color: #333;
+
+}
+
+.blog .bio p {
+  margin: 0;
+padding: 13px 0;
+}
+
+.blog .bio p a {
+text-decoration: none;
+border-bottom: 1px solid #ccc;
+font-weight: 500;
+color: #030303;
+}
+
+.blog .bio p a:hover {
+border-bottom: 0;
+}
+
+.blog .bio .img {
+    width: 100px;
+    aspect-ratio: 1;
+    border-radius: 100%;
+    overflow: hidden;
+    background: #f2f2f2;
+}
+
+.blog .bio img {
+    width: 120px;
+    margin: -10px 0 0 -10px;
+    max-width: none;
+}
+
+.blog img, .blog video {
+  max-width: 100%;
+  max-height: 60vh;
+}
+
+.blog a {
+  text-decoration: underline;
+  text-decoration-color: #ccc;
+  border: 0;
+  font-weight: 600;
+}
+
+.blog a:hover {
+  text-decoration: none;
+}
+
+ul li, ol li {
+  line-height: 1.75;
+}
+
+pre {
+  background: rgba(240, 245, 245, 0.05);
+  padding: 10px;
+  overflow-x: scroll;
+}
+
+
+code {
+  font-family: Inconsolata,Consolas,Monaco,Andale Mono,Ubuntu Mono,monospace;
+  font-size: 1rem;
+background: rgba(240, 245, 245, 0.07) !important;
+  line-height: 1.6;
+}
+
+table {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 8px;
+  font-size: 14px;
+}
+
+table thead tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+}
+
+table thead tr th {
+  font-weight: 600 !important;
+}
+
+table th {
+border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+padding-bottom: 8px;
+}
+
+pre code {
+  background: transparent !important;
+  padding: 0;
+}
+
+h1 {
+  font-weight: bold;
+  margin: 2em auto .8em;
+  font-size: 36px;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: .01em;
+}
+
+h2 {
+  margin: 2em 0 .5em;
+  font-weight: 700;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+h3 {
+  margin: 2em 0 0em;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.toc {
+  background: rgba(240, 245, 245, 0.05) !important;
+  padding: 25px 25px 25px 25px;
+  font-weight: 400;
+  font-size: 0.9;
+  margin: 5rem 0;
+  font-size: 1rem;
+  list-style: none;
+  font-weight: 400;
+}
+
+.toc .toc-content {
+  column-count: 2;
+}
+
+.toc a {
+text-decoration: none;
+font-weight: 500;
+}
+
+.toc h1 {
+  display: inline-block;
+margin: 0 0 20px 0;
+font-size: 0.9rem;
+font-weight: 500;
+  color: #fff;
+  padding: 8px 10px;
+  letter-spacing: -0.5px;
+  background: rgba(255, 255, 255, 0.1);
+  font-family: 'Berkeley Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  text-transform: uppercase;
+}
+
+.toc ul {
+  margin: 0;
+padding-left: 0px;
+list-style: none;
+}
+
+.toc ul li {
+  margin: 3px 0px;
+}
+
+.toc ul li:before {
+  display: none;
+}
+
+.toc ul li ul {
+  margin-left: 25px;
+}
+
+.toc ul li:before {
+  content: "";
+  display: none;
+}
+
+.toc ul li a {
+  border: 0;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.toc ul li a:hover {
+  color: #fff;
+}
+
+.toc ul li strong a {
+  font-weight: 500;
+}
+
+blockquote {
+  margin: 20px 0;
+  border-left: 5px solid rgba(255, 255, 255, 0.15);
+  line-height: 1.8;
+  padding: 0px 30px 0 30px;
+  color: rgba(255, 255, 255, 0.95);
+  position: relative;
+}
+
+/*blockquote:before {
+  content: "“";
+  display: block;
+  font-size: 142px;
+  position: absolute;
+  top: -65px;
+  left: 20px;
+  color: #ddd;
+}*/
+
+.blog-post .post blockquote p {
+  color: #555;
+}
+
+.img-alt {
+  text-align: center;
+  margin-top: 0px;
+  display: block;
+  font-size: 0.8rem;
+  color: #888;
+  line-height: 1.7;
+  margin: 10px 0 20px 0;
+}
+
+.profile-pic {
+  cursor: pointer;
+  position: absolute;
+margin-left: -120px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+color: rgba(255, 255, 255, 0.4);
+font-size: 14px;
+text-align: left;
+text-decoration: none !important;
+line-height: 0.7;
+}
+
+.profile-pic span {
+margin: 8px 0 0 0;
+font-size: 16px;
+font-weight: 700;
+color: rgba(255, 255, 255, 0.75);
+line-height: 0.7;
+letter-spacing: 0.1px !important;
+}
+
+.profile-pic img {
+  display: block;
+  width: 88px;
+  border-radius: 10px;
+}
+
+.profile-pic:hover span {
+  color: #fff;
+}
+
+.back-btn {
+border-top: 1px solid rgba(255, 255, 255, 0.05);
+padding-top: 12px;
+padding-bottom: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+height: 30px;
+font-size: 16px;
+
+ }
+
+.back-btn a {
+  color: rgba(255, 255, 255, 0.95);
+  font-weight: 600;
+  text-decoration: none;
+  border: 0;
+  padding: 10px 15px 10px 40px;
+border-radius: 8px;
+position: relative;
+transition: color, background-color .2s;
+margin-left: -14px;
+opacity: 0.5;
+}
+
+.back-btn svg {
+  stroke: rgba(255, 255, 255, 0.4);
+  position: absolute;
+  top: 9px;
+  left: 13px;
+  opacity: 1;
+  transition: opacity .2s;
+}
+
+.back-btn a:hover, .back-btn a:hover svg {
+  opacity: 1;
+  border: 0;
+}
+
+@media only screen and (max-width: 1050px) {
+.blog {
+margin-top: 10vh;
+}
+
+.profile-pic {
+position: static;
+margin: 0 0 48px 0;
+}
+
+.page-date {
+  margin-bottom: 15px;
+}
+}
+
+@media only screen and (max-width: 840px) {
+  .page-image {
+    margin-left: 0;
+}
+
+
+}
+
+
+@media only screen and (max-width: 650px) {
+.blog .bio {
+grid-template-columns: 75px auto;
+}
+
+  .blog .bio .img {
+    width: 75px;
+  }
+
+  .blog .bio img {
+    width: 95px;
+  }
+
+  .blog .bio p {
+padding: 0;
+font-size: 16px;
+  }
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid #ddd;
+}
+
+/* github dark theme */
+
+pre code.hljs{display:block;overflow-x:auto;padding:1em}code.hljs{padding:3px 5px}/*!
+  Theme: GitHub Dark
+  Description: Dark theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
+*/.hljs{color:#c9d1d9;background:#0d1117}.hljs-doctag,.hljs-keyword,.hljs-meta .hljs-keyword,.hljs-template-tag,.hljs-template-variable,.hljs-type,.hljs-variable.language_{color:#ff7b72}.hljs-title,.hljs-title.class_,.hljs-title.class_.inherited__,.hljs-title.function_{color:#d2a8ff}.hljs-attr,.hljs-attribute,.hljs-literal,.hljs-meta,.hljs-number,.hljs-operator,.hljs-selector-attr,.hljs-selector-class,.hljs-selector-id,.hljs-variable{color:#79c0ff}.hljs-meta .hljs-string,.hljs-regexp,.hljs-string{color:#a5d6ff}.hljs-built_in,.hljs-symbol{color:#ffa657}.hljs-code,.hljs-comment,.hljs-formula{color:#8b949e}.hljs-name,.hljs-quote,.hljs-selector-pseudo,.hljs-selector-tag{color:#7ee787}.hljs-subst{color:#c9d1d9}.hljs-section{color:#1f6feb;font-weight:700}.hljs-bullet{color:#f2cc60}.hljs-emphasis{color:#c9d1d9;font-style:italic}.hljs-strong{color:#c9d1d9;font-weight:700}.hljs-addition{color:#aff5b4;background-color:#033a16}.hljs-deletion{color:#ffdcd7;background-color:#67060c}
+
+  </style>
+</head>
+<body>
+
+  <div class="blog column">
+    <a class="profile-pic" href="/">
+      <img src="/static/self.jpg" />
+      <span>Erik Zilinsky</span>
+      {{ createdAt  | date("MMM dd, yyyy", "gl") }}
+    </a>
+    <div class="page-date"></div>
+    <h1 class="page-title">{{ title }}</h1>
+    {% if image and not hideImage %}
+    <img class="page-image" src={{ image }} />
+    {% if imageAlt %}
+    <span class="img-alt">{{ imageAlt }}</span>
+    {% endif %}
+    {% endif %}
+    <div class="blog-content">{{ content | safe }}</div>
+    <div class="back-btn">
+       <a href="/">
+
+<svg width="16" height="16" viewbox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6 3L2 7L6 11" stroke="current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M2 7H9.2C11.8509 7 14 9.23863 14 12" stroke="current" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+
+Back
+  </a>
+      </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,361 @@
+---
+title: Erik Zilinsky
+---
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>{{ title }}</title>
+  <style type="text/css">
+* {
+  font-weight: normal;
+  -webkit-font-smoothing: antialiased !important;
+  -moz-font-smoothing: antialiased !important;
+  -moz-osx-font-smoothing: grayscale;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  text-renderoing: geometricPrecision;
+}
+
+@font-face {
+  font-family: 'Berkeley Mono';
+  src: url(/fonts/BerkeleyMono-Regular.woff2);
+}
+
+
+html, body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  background: rgb(10, 14, 21);
+  color: 14px;
+  font-size: 17px;
+  font-weight: 400;
+  font-weight: 400;
+  font-family: 'Berkeley Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  line-height: 1.6;
+  color: #181818;
+}
+
+
+a {
+  color: rgba(255, 255, 255, 0.95);
+  text-decoration: none;
+    border-bottom: 1px dotted rgba(255, 255, 255, 0.35);
+  transition: border-color 0.2s;
+}
+
+a:hover {
+  border-bottom-width: 0;
+}
+
+
+.main {
+  margin: 0 auto;
+  margin-top: 20vh;
+  width: calc(100% - 40px);
+  max-width: 850px;
+  height: auto;
+  display: grid;
+  grid-template-columns: 128px auto;
+  grid-column-gap: 20px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 14px;
+}
+
+.main .profile-pic img {
+  width: 128px;
+  border-radius: 20px;
+}
+
+.info-table {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  row-gap: 10px;
+  line-height: 1.6;
+}
+
+
+.info-table strong {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400 !important;
+}
+
+h3 {
+  font-size: 21px;
+  margin-top: 34px;
+}
+
+h3 span {
+  padding: 4px 6px;
+  background: rgb(30, 34, 42);
+  margin-left: -4px;
+}
+
+.work-table {
+  font-size: 14px;
+  gap: 4px;
+}
+
+.work-table .row {
+  display: grid;
+  grid-template-columns: 120px auto;
+  min-height: 28px;
+  align-items: center;
+}
+
+.work-table .row span, .work-table .row label {
+  line-height: 1.8;
+}
+
+.work-table .row label {
+  display: block;
+  height: 100%;
+  color: rgb(0, 160, 255);
+}
+
+.work-table .row label.green {
+  color: rgb(47, 204, 113);
+}
+
+.work-table .row label.red {
+  color: rgb(255, 70, 20);
+}
+
+.work-table .row span {
+  color: rgb(255, 255, 255, 0.75);
+}
+
+i {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.work-table .divider {
+  margin: 12px 0;
+  width: 100px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logbook .entries {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.logbook .entries .entry {
+  display: flex;
+  gap: 8px;
+}
+
+.entry div, .entry span {
+  line-height: 1.4;
+}
+
+.logbook .entries .entry span {
+
+  color: rgba(255, 255, 255, 0.4);
+  display: block;
+  height: 100%;
+}
+
+a.secondary {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+p {
+  line-height: 1.6;
+}
+
+pre {
+  font: 1.1rem Assistant,-apple-system,BlinkMacSystemFont,Arial,sans-serif;
+}
+
+code {
+  font: 1.1rem Assistant,-apple-system,BlinkMacSystemFont,Arial,sans-serif;
+}
+
+iframe {
+  max-width: 100% !important;
+}
+
+.posts ul {
+  list-style: none;
+}
+
+ul li, ol li {
+  line-height: 2;
+  margin: 0;
+  padding: 0;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgb(150, 150, 150);
+  margin: 10px 0 5px 0;
+}
+
+.posts ul {
+  padding: 0;
+}
+
+.posts .date {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.links {
+display: flex;
+}
+
+@media only screen and (max-width: 850px) {
+  .main, .info-table {
+    grid-template-columns: 1fr;
+  }
+
+  .main {
+    margin-top: 10vh;
+   }
+
+   .profile-pic {
+    margin-bottom: 20px;
+   }
+
+  .work-table .row {
+    grid-template-columns: 1fr;
+    margin-top: 12px;
+  }
+
+  .logbook .entries .entry {
+    flex-direction: column;
+  }
+}
+
+::selection {
+  color: rgba(253, 73, 193, 0.8);
+  background: rgba(80, 60, 85, 0.3);
+}
+
+  </style>
+</head>
+<body>
+  <div class="main">
+  <div class="profile-pic">
+    <img src="/static/self.jpg" />
+  </div>
+  <div class="main-content">
+    <div class="info-table">
+      <div>
+        <strong>Name:</strong>
+	<label>Erik Zilinsky</label>
+      </div>
+      <div>
+        <strong>Location:</strong>
+	<label>Hungary<i>'24</i>, Slovakia<i>'23</i></label>
+      </div>
+      <div>
+        <strong>Occupation:</strong>
+	<label>Cloud Engineer</label>
+      </div>
+
+      <div>
+        <strong>Links:</strong>
+	<label><a href="mailto:erik.zilinsky@gmail.com">Email</a> <i>|</i> <a href="https://x.com/_zili__">X</a> <i>|</i> <a href="https://www.linkedin.com/in/erikzilinsky/">Linkedin</a> <i>|</i> <a href="https://github.com/iamzili">Github</a></label>
+      </div>
+    </div>
+    <div class="work-table">
+     	 <h3><span>Work</span></h3>
+	 <div class="row">
+           <label class="green">Current</label>
+	   <span>Cloud Engineer @ <a href="https://www.collinsaerospace.com/">Collins Aerospace</a> and <a href="https://nuvolar.eu/">Nuvolar</a></span>
+         </div>
+	 <!-- <div class="row">
+	   <label class="red">Past</label>
+	   <span>Lead Engineer @ GGG, CTO @ AAA, BBB, CCC</span>
+	 </div> -->
+
+<div class="divider"></div>
+
+         <!-- <div class="row">
+           <label class="green">Projects</label>
+	   <span><a href="https://sway.so">Sway</a>, <a href="https://mitte.ai">Mitte</a></span>
+         </div>
+
+         <div class="row">
+           <label>Research</label>
+	   <span><a href="https://drive.google.com/file/d/1dXlVa9NAAMzSOuyQpeE77YSqilLpdQ_T/view">Typography in AI Image Generation</a></span>
+         </div>
+
+         <div class="row">
+           <label>Experiments</label>
+	   <span><a href="https://x.com/azerkoculu/status/1838856278132547738">Web browser w/ builtin search engine</a>, <a href="https://github.com/azer/kaktus">kaktüs browser</a></span>
+         </div>
+
+         <div class="row">
+           <label>Open-source</label>
+	   <span><a href="https://github.com/azer/llmcat">llmcat</a>, <a href="https://github.com/azer/carve">Carve</a>, <a href="https://github.com/azer/tile">Tile</a>, <a href="https://github.com/azer/bind">Bind</a>, <a href="https://github.com/azer/eleven-labs-tts-stream">11labs-tts-stream</a>,  <a href="https://github.com/npm-dom">npm-dom</a>, <a href="https://github.com/azer/ethereum-tipping-wallet">eth-tipping-wallet</a>, <a href="https://github.com/azer/crud">crud</a>, <a href="https://github.com/azer/logger">logger</a>, <a href="https://github.com/azer/persistent-pool">persistent-pool</a>, <a href="https://github.com/azer" class="secondary">more</a></span>
+         </div>
+
+         <div class="row">
+           <label>Linux</label>
+	   <span><a href="https://github.com/happy-hacking-linux">Happy Hacking Linux</a>, <a href="https://github.com/happy-hacking-linux/timezone-selector">TZ Selector</a>, <a href="https://github.com/azer/delicious-surf">Delicious Surf Browser</a>, <a href="https://github.com/azer/distractions">.distractions</a></span>
+         </div>
+
+         <div class="row">
+           <label>Emacs</label>
+	   <span><a href="https://github.com/azer/miso-macs">miso-macs</a>, <a href="https://github.com/azer/npm.el">npm.el</a></span>
+         </div>
+
+         <div class="row">
+           <label>Documentation</label>
+	   <span><a href="https://azerkoculu.com/posts/elm">The Hitchhiker's Guide to Elm</a> <i>[2018]</i>, <a href="/posts/ileri-seviye-javascript.html">İleri Seviye JavaScript</a> <i>[2007]</i></span>
+         </div>
+
+         <div class="row">
+           <label>Side-projects</label>
+	   <span><a href="https://chromewebstore.google.com/detail/islamic-new-tab/holffmmbcpgclchdiogmlflljalffodl">Islamic New Tab</a>, <a href="https://kaynak.app">Kaynak</a>, <a href="https://afrikaradyo.com">Afrika Radyo</a></span>
+         </div>
+
+         <div class="row">
+           <label class="red">Inactive</label>
+	   <span><a href="https://getfirebug.com">Firebug Lite</a> <i>[2008]</i>, initeye.ai <i>[2019]</i>, <a href="/posts/rethinking-web-browsers-and-making-of-kozmos-new-tab">Kozmos</a> <i>[2017]</i>, <a href="https://x.com/azerkoculu/status/1758958091352072610">R9 IDE</a> <i>[2007]</i>, MultiplayerChess.com <i>[2011, Acq'd]</i>, <a href="https://www.flickr.com/photos/azer/4169597434/in/dateposted">SpreadsheetLIVE</a> <i>2008</i></span>
+         </div> -->
+
+    </div>
+    <div class="logbook">
+     	 <h3><span>Logbook</span></h3>
+	 <div class="entries">
+
+    <div class="entry">
+      <span>2023.02</span> <div>I primarily started working for Collins Aerospace, occasionally assisting the team at Nuvolar.</div>
+    </div>
+
+  <div class="entry">
+    <span>2019.04</span> <div>Luckily, I realized that I needed to move away from z/OS, and the team at <a href="https://icontest.hu/">iContest (HU)</a> hired me as a Cloud/DevOps engineer.</div>
+  </div>
+
+  <div class="entry">
+    <span>2015.06</span> <div>I started working for IBM as a DB2 Database Administrator on z/OS.</div>
+  </div>
+	 </div>
+    </div>
+    <div class="blog">
+     	 <h3><span>Blog</span></h3>
+
+<div class="posts">
+    {{ content | safe }}
+    </div>
+    </div>
+    </div>
+  </div>
+
+</body>
+</html>
