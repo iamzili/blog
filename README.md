@@ -72,3 +72,31 @@ deno task build
 ```
 
 The built site will be in the `_site` directory.
+
+# Terraform
+
+```
+cd terraform
+```
+
+1. Create `terraform.tfvars` file, add the following content:
+
+```
+aws_region           = "xxx"
+aws_profile          = "xxx"
+cloudflare_api_token = "xxx"
+site_domain          = "xxx.com"
+```
+
+2. Create the resources via:
+
+```
+terraform init
+terraform apply
+```
+
+3. Copy files from `_site` directory to the S3 bucket with:
+
+```
+aws s3 cp ../_site s3://$(terraform output -raw website_bucket_name)/ --recursive
+```
