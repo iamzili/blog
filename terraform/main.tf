@@ -119,3 +119,12 @@ resource "cloudflare_zone_setting" "setting" {
     setting_id = "always_use_https"
     value = "on"
 }
+
+// This resource cannot be destroyed from Terraform...
+// Security --> Bots
+resource "cloudflare_bot_management" "bot_management" {
+  zone_id = data.cloudflare_zones.domain.result[0].id
+  ai_bots_protection = "block"
+  enable_js = true
+  fight_mode = true
+}
